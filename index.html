@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue-Based Load Leveling Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <h2>📦 Hệ thống đặt món (Queue-Based Load Leveling)</h2>
+
+    <div class="container">
+      <div class="left-panel">
+        <button onclick="placeOrder()">🛒 Đặt món ngay</button>
+
+        <h3>📥 Hàng đợi món ăn</h3>
+        <div class="queue" id="orderQueue"></div>
+
+        <h3>🍳 Đang chế biến</h3>
+        <div class="processing" id="processingOrder">Không có đơn hàng</div>
+      </div>
+
+      <div class="right-panel">
+        <h3>📊 Tần suất đặt món</h3>
+        <div class="chart-container">
+          <canvas id="orderChart"></canvas>
+        </div>
+
+        <h3>📊 Tần suất xử lý món</h3>
+        <div class="chart-container">
+          <canvas id="processChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
