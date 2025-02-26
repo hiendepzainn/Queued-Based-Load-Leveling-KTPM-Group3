@@ -15,10 +15,10 @@ const orderChart = new Chart(orderChartCtx, {
   data: {
     labels: Array(10)
       .fill("")
-      .map((_, i) => `${i}s`),
+      .map((_, i) => `-${45 - i * 5}s`),
     datasets: [
       {
-        label: "Số đơn đặt mỗi giây",
+        label: "Số đơn đặt mỗi 5 giây",
         data: orderData,
         borderColor: "#007bff",
         backgroundColor: "rgba(0, 123, 255, 0.2)",
@@ -39,10 +39,10 @@ const processChart = new Chart(processChartCtx, {
   data: {
     labels: Array(10)
       .fill("")
-      .map((_, i) => `${i}s`),
+      .map((_, i) => `-${45 - i * 5}s`),
     datasets: [
       {
-        label: "Số món xử lý mỗi giây",
+        label: "Số món xử lý mỗi 5 giây",
         data: processData,
         borderColor: "#28a745",
         backgroundColor: "rgba(40, 167, 69, 0.2)",
